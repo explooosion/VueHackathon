@@ -1,4 +1,5 @@
 # VueHackathon
+![Vue](https://cn.vuejs.org/images/logo.png)  
 This is a plan for learning [Vue](https://cn.vuejs.org/).    
 [vue & vuex 01 - Vue Introduction & 鐵人賽說明](http://ithelp.ithome.com.tw/articles/10184834)
 
