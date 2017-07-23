@@ -1,8 +1,7 @@
 # VueHackathon
-this is a plan for learning Vue  
+This is a plan for learning [Vue](https://cn.vuejs.org/).    
 [vue & vuex 01 - Vue Introduction & 鐵人賽說明](http://ithelp.ithome.com.tw/articles/10184834)
-  
-Fighting!!  
+
 
 ## Plan（once a week）
 
@@ -15,6 +14,8 @@ Fighting!!
 3. Vuex 開發與 ajax  
 
 
-4. Vue 客製化與 routre 進階功能  
+4. Vue 客製化與 routre 進階功能    
 
 
+    
+Fighting!!  
