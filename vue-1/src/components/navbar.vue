@@ -27,9 +27,12 @@
                     </div>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <form class="navbar-form navbar-right">
+                <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+                <slot name="right">
+                    <!-- 包裹在 slot 裡面的這段 code 是預設 -->
+                </slot>
             </form>
         </div>
     </nav>

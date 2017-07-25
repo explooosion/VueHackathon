@@ -1,14 +1,7 @@
 <template>
   <div id="app">
     <app-navbar />
-    <app-head />
-    <!-- <div class="container">
-      <img src="./assets/logo.png">
-      <router-link :to="{path: '/hello'}">Hello</router-link>
-      <router-link :to="{name: 'c2f'}">CtoF</router-link>
-      <router-view></router-view>
-    </div> -->
-    <app-main />
+    <router-view></router-view>
     <app-footer />
   </div>
 </template>
@@ -25,8 +18,6 @@ export default {
   name: 'app',
   components: {
     'app-navbar': navbar,
-    'app-head': head,
-    'app-main': main,
     'app-footer': footer,
   }
 }

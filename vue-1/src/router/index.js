@@ -9,11 +9,12 @@ Vue.use(Router)
 export default new Router({
   routes: [{
     path: '/hello',
-    name: 'Hello',
     component: Hello
   }, {
     path: '/c2f',
-    name: 'c2f',
     component: C2F
+  }, {
+    path: '/*',
+    component: Hello
   }]
 })
