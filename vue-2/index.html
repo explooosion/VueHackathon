@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>VueJS - Form</title>
+    <title>VueJS - Bind</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js'></script>
@@ -15,82 +15,18 @@
 </head>
 
 <body>
-    <h1>VueJS - Form</h1>
+    <h1>VueJS - Bind</h1>
 
-    <div class="form-input">
-        <span>Message is: {{ message }}</span>
-        <br>
-        <input type="text" v-model="message" placeholder="edit me">
-    </div>
-
-    <hr>
-
-    <div class="form-checkbox">
-        <input type="checkbox" id="checkbox" v-model="checked">
-        <label for="checkbox">{{ checked }}</label>
-    </div>
-
-    <hr>
-
-    <div class="form-checkboxes">
-        <input type="checkbox" id="apple" value="apple" v-model="checkedFruit"><label for="apple">apple</label>
-        <input type="checkbox" id="orange" value="orange" v-model="checkedFruit"><label for="orange">orange</label>
-        <input type="checkbox" id="banana" value="banana" v-model="checkedFruit"><label for="banana">banana</label>
-        <span>CheckedFruit：{{ checkedFruit }}</span>
-    </div>
-
-    <hr>
-
-    <div class="form-radio">
-        <input type="radio" id="one" value="one" v-model="picked"><label for="one">One</label>
-        <input type="radio" id="two" value="two" v-model="picked"><label for="two">Two</label>
-        <span>Picked: {{ picked }}</span>
-    </div>
-
-    <hr>
-
-    <div class="form-select">
-        <select v-model="selected">
-            <option>A</option>
-            <option>B</option>
-            <option>C</option>
-        </select>
-        <span>Selected: {{ selected }}</span>
-    </div>
+    <a v-bind:href="url">VueJS</a>
+    <br>
+    <a :href="url">VueJS</a>
+    <br>
 
     <script>
         new Vue({
-            el: '.form-input',
+            el: 'body',
             data: {
-                message: ''
-            }
-        });
-
-        new Vue({
-            el: '.form-checkbox',
-            data: {
-                checked: false
-            }
-        });
-
-        new Vue({
-            el: '.form-checkboxes',
-            data: {
-                checkedFruit: []
-            }
-        });
-
-        new Vue({
-            el: '.form-radio',
-            data: {
-                picked: ''
-            }
-        });
-
-        new Vue({
-            el: '.form-select',
-            data: {
-                selected: 'B'
+                url: 'https://4.bp.blogspot.com/-QPkAcNH1NUQ/WRfc27-qWFI/AAAAAAAAy6g/74NNXOZ4pywIMCBbExG566EhxupnNDDrACLcB/s1600/vue-newsletter.png'
             }
         });
     </script>
