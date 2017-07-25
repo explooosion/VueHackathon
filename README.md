@@ -4,13 +4,13 @@ This is a plan for learning [Vue](https://cn.vuejs.org/).
 
 ## Plan
 
-1. Hello Vue  
+1. vue-1 - Vue Form  
 
 
-2. Vue Form 
+2. vue-2 - Vue Bind 
 
 
-3. Vue Bind 
+3. vue-3 - Vue Filter 
 
 
 

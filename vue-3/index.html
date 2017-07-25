@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>VueJS - Bind</title>
+    <title>VueJS - Filter</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js'></script>
@@ -15,26 +15,22 @@
 </head>
 
 <body>
-    <h1>VueJS - Bind</h1>
+    <h1>VueJS - Filter</h1>
 
     <div>
-        <a v-bind:href="url" target="_blank">VueJS</a> |
-        <a :href="url" target="_blank">VueJS</a>
-        <a v-bind="{ href : url }" target="_blank">VueJS</a>
-        <br>
-        <img v-bind:src="img">
-        <img :src="img">
-        <br>
-        <input type="text" v-bind="{ id : customId }" v-model="customId">
+        {{label}} -> {{ label | upper }}
     </div>
 
     <script>
         new Vue({
             el: 'div',
             data: {
-                url: 'https://vuejs.org/',
-                img: 'https://vuejs.org/images/logo.png',
-                customId: 'lbCustom'
+                label: 'abc'
+            },
+            filters: {
+                upper(value) {
+                    return value.toUpperCase();
+                }
             }
         });
     </script>
