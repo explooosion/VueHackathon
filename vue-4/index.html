@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>VueJS - Computed</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js'></script>
+    <style>
+        body {
+            padding: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>VueJS - Computed</h1>
+
+    <div>
+        <input type="number" v-model="number">
+        <p>Number: {{ number }}</p>
+        <p>Square: {{ square }}</p>
+    </div>
+
+    <script>
+        new Vue({
+            el: 'div',
+            data: {
+                number: 5
+            },
+            computed: {
+                square() {
+                    return Math.pow(this.number, 2);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
