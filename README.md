@@ -1,22 +1,22 @@
-# VueHackathon
-![Vue](https://cn.vuejs.org/images/logo.png)  
+# VueHackathon  
 This is a plan for learning [Vue](https://cn.vuejs.org/).    
-[Vue Introduction & 鐵人賽說明](http://ithelp.ithome.com.tw/articles/10184834)
 
 
-## Plan（once a week）
+## Plan
 
-1. Vue 與 routre 入門  
-
-
-2. Vuex 入門  
+1. Hello Vue  
 
 
-3. Vuex 開發與 ajax  
+2. Vue Form 
 
 
-4. Vue 客製化與 routre 進階功能    
+3. Vue Bind 
 
 
-    
-Fighting!!  
+
+## Ref
+
++ [Vuedinner #1 第一次用 Vue.js 就愛上 by Kuro](https://www.youtube.com/watch?v=jXdZlbH_ut8)   
+
+
+
