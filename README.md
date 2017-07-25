@@ -8,6 +8,7 @@ This is a plan for learning [Vue](https://cn.vuejs.org/).
 2. Bind 
 3. Filter 
 4. Computed 
+5. Style 
 
 
 

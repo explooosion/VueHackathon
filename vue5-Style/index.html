@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>VueJS - Style</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js'></script>
+    <style>
+        body {
+            padding: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .ft-green {
+            color: #0f0;
+        }
+
+        .line {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>VueJS - Style</h1>
+
+    <div>
+        <h2 :class="fontGreen">Hello Vue!</h2>
+        <h2 :class="[fontGreen, underline]">Hello Vue!</h2>
+        <h2 :style="styleObj1">Hello Vue!</h2>
+        <h2 :style="[styleObj1, styleObj2]">Hello Vue!</h2>
+    </div>
+
+    <script>
+        new Vue({
+            el: 'div',
+            data: {
+                fontGreen: 'ft-green',
+                underline: 'line',
+                styleObj1: {
+                    color: 'white',
+                    backgroundColor: 'black'
+                },
+                styleObj2: {
+                    fontStyle: 'italic'
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>
