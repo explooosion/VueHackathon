@@ -44,8 +44,8 @@
         <li v-for="(n,index) in 10">{{ index }} - {{ n }}</li>
     </ul>
 
-    <h3>Filter</h3>
-    <div class="filter">
+    <h3>Filter - Limit</h3>
+    <div class="filter-limit">
         <input type="number" v-model="min">
         <ul>
             <li v-for="n in limit">{{ n }}</li>
@@ -81,7 +81,7 @@
         });
 
         new Vue({
-            el: '.filter',
+            el: '.filter-limit',
             data: {
                 arr: [2, 4, 6, 8, 10],
                 min: 5,
