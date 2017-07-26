@@ -11,7 +11,8 @@ This is a plan for learning [Vue2](https://cn.vuejs.org/).
 5. Style 
 6. If/Show
 7. For
-
+8. Event
+9. Components
 
 ## Ref
 
