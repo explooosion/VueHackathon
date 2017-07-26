@@ -1,5 +1,5 @@
 # VueHackathon  
-This is a plan for learning [Vue](https://cn.vuejs.org/).    
+This is a plan for learning [Vue2](https://cn.vuejs.org/).    
 
 
 ## Plan
@@ -9,7 +9,8 @@ This is a plan for learning [Vue](https://cn.vuejs.org/).
 3. Filter 
 4. Computed 
 5. Style 
-
+6. If/Show
+7. For
 
 
 ## Ref

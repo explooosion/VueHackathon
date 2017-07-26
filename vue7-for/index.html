@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>VueJS - For</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js'></script>
+    <style>
+        body {
+            padding: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .ft-green {
+            color: #0f0;
+        }
+
+        .line {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>VueJS - For</h1>
+
+    <h3>Array</h3>
+    <ul class="list">
+        <li v-for="(list, index) in lists">
+            {{ parent }} - {{ index }} - {{ list.message }}
+        </li>
+    </ul>
+
+    <h3>Object</h3>
+    <ul class="info">
+        <li v-for="o in obj">
+            {{ o }}
+        </li>
+    </ul>
+
+    <h3>Range</h3>
+    <ul class="range">
+        <li v-for="(n,index) in 10">{{ index }} - {{ n }}</li>
+    </ul>
+
+    <h3>Filter</h3>
+    <div class="filter">
+        <input type="number" v-model="min">
+        <ul>
+            <li v-for="n in limit">{{ n }}</li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el: '.list',
+            data: {
+                parent: 'List',
+                lists: [{
+                    message: 'Foo'
+                }, {
+                    message: 'Bar'
+                }],
+            },
+        });
+
+        new Vue({
+            el: '.info',
+            data: {
+                obj: {
+                    name: 'Robby',
+                    sex: 'male',
+                    year: '24'
+                }
+            }
+        });
+
+        new Vue({
+            el: '.range',
+        });
+
+        new Vue({
+            el: '.filter',
+            data: {
+                arr: [2, 4, 6, 8, 10],
+                min: 5,
+            },
+            computed: {
+                limit() {
+                    return this.arr.filter((r) => {
+                        return r > this.min
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
