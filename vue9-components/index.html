@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>VueJS - Components</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js'></script>
+
+</head>
+
+<body>
+    <h1>VueJS - Components</h1>
+
+    <div id="parent">
+        <child :number="arr"></child>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#parent',
+            data: {
+                arr: [1, 2, 3, 4, 5]
+            },
+            components: {
+                child: Vue.extend({
+                    template: '<ul><li v-for="i of number">{{ i }}</li></ul>',
+                    props: {
+                        number: Array
+                    },
+                }),
+            }
+        });
+    </script>
+</body>
+
+</html>
