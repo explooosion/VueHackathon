@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>VueJS - Emit</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js'></script>
+
+</head>
+
+<body>
+    <h1>VueJS - Emit</h1>
+
+    <template id="child-template">
+        <button type="type" v-on:click="parentmsg">Child</button>
+    </template>
+
+    <div id="events-example">
+        <button type="type" @click="alertmsg">Parent</button>
+        <child v-on:childemit="alertmsg"></child>
+    </div>
+
+    <script>
+        Vue.component('child', {
+            template: '#child-template',
+            data: function () {
+                return {
+                    msg: 'I\'m child',
+                };
+            },
+            methods: {
+                parentmsg() {
+                    this.$emit('childemit')
+                }
+            }
+        });
+
+        new Vue({
+            el: '#events-example',
+            data: {
+                msg: 'I\'m parent.'
+            },
+            methods: {
+                alertmsg() {
+                    alert(this.msg);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -13,20 +13,22 @@
     <h1>VueJS - Components</h1>
 
     <div id="parent">
-        <child :number="arr"></child>
+        Parent：<input type="text" v-model="msg"> {{ msg }}
+        <child :msg="msg"></child>
     </div>
 
     <script>
         new Vue({
             el: '#parent',
             data: {
-                arr: [1, 2, 3, 4, 5]
+                msg: 'Hello'
             },
             components: {
                 child: Vue.extend({
-                    template: '<ul><li v-for="i of number">{{ i }}</li></ul>',
+                    template: '<div>Child：<input type="text" v-model="msg" />{{msg}}</div>',
                     props: {
-                        number: Array
+                        number: Array,
+                        msg: String
                     },
                 }),
             }
